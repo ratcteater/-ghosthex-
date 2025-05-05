@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #000203;
+    --secondary-color: #6a148de4;
+    --accent-color: #76f74f;
+    --light-color: #7a0099;
+    --dark-color: #33315c;
+    --success-color: #2654ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* হেডার স্টাইল */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* সার্চ সেকশন */
+.search-section {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.search-section input {
+    padding: 12px 15px;
+    width: 70%;
+    max-width: 500px;
+    border: 2px solid #ddd;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-section input:focus {
+    border-color: var(--success-colo);
+}
+
+.search-section button {
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.search-section button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ক্যাটাগরি বাটন */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.category-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* লিংক কার্ড গ্রিড */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 3rem;
+}
+
+.link-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 3px rgb(16, 48, 211);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: -5px -2px 80px rgb(11, 255, 68);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+}
+
+.link-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--light-color);
+    color: rgb(255, 247, 14);
+    text-decoration: none;
+    border-radius: 5px 15px;
+    transition: background 0.2s;
+}
+
+.visit-btn:hover {
+    background-color:#44ff00;
+    color:#000000;
+    border-radius: 30px 5px;
+}
+
+/* ফুটার স্টাইল */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* রেস্পন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+    .links-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-section input {
+        width: 60%;
+    }
+
+    .link-card {
+        padding: 1rem;
+    }
+}
